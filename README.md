@@ -4,7 +4,7 @@
 ### Using FETCH API 
 #### Created a English to Dothraki Translation App using Fetch API.
 #### API rate limit is 60 calls per day with distribution of 5 calls per hour.
-##### API URL: (https://funtranslations.com/api/)    App URL: (https://funtranslations.com/api/)
+##### API URL: (https://funtranslations.com/api/)    App URL: (https://translation-app.netlify.app/)
 
 ![poster](dist/images/poster.png)
 
