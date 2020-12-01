@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
+
+body,
+html {
+  font-family: Inter-Regular;
+}
+
+.common-header {
+  font-family: "Bad Script", cursive;
+  color: var(--text-color);
+}
+
+.common-description {
+  font-family: Inter-Regular;
+  color: var(--secondary);
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.form-column label {
+  font-size: 1rem;
+}
+
+.form-label {
+  font-family: Inter-Regular;
+}
+
+.form-field {
+  font-family: Inter-Regular;
+}
+
+.quote {
+  border-left: 2px solid var(--red);
+  background-color: var(--background-medium-gray);
+  padding: 0.4rem 0.8rem;
+  color: var(--red);
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+#errorMessage {
+  display: none;
+}
