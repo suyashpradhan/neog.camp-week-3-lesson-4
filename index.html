@@ -13,7 +13,7 @@
 
     <header>
         <div class="intro">
-            <h2 class="common-header heading-2 text-center font-weight-extrabold">Dothraki Translator</h2>
+            <h1 class="common-header heading-1 text-center mT-1 mB-1 font-weight-extrabold">Dothraki Translator</h1>
         </div>
     </header>
 
@@ -36,20 +36,29 @@
     <section id="translation" class="section">
         <div class="wrapper">
             <form action="#" class="form">
-                <div class="form-column">
-                    <label for="input " class="form-label">Enter your input (in English)</label>
-                    <textarea id="input" class="form-field form-textarea"></textarea>
-                </div>
-                <div class="form-column" id="button-column">
-                    <button class="button primary-button mB-1" type="button" id="translate-button">Translate</button>
-                </div>
-                <div class="form-column">
-                    <label for="translated-output" class="form-label">Translated Text (in Dothraki)</label>
-                    <textarea id="translated-output" class="form-field form-textarea"></textarea>
+                <div class="row">
+                    <div class="column-extra-large-5 column-large-5 column-small-12">
+                        <div class="form-column">
+                            <label for="input " class="form-label">Enter your input (in English)</label>
+                            <textarea id="input" class="form-field form-textarea"></textarea>
+                        </div>
+                    </div>
+                    <div
+                        class="column-extra-large-2 column-large-2 column-small-12 flex flex-justify-center flex-align-center">
+                        <button class="button primary-button width-100 mB-1" type="button"
+                            id="translate-button">Translate</button>
+                    </div>
+                    <div class="column-extra-large-5 column-large-5 column-small-12">
+                        <div class="form-column">
+                            <label for="translated-output" class="form-label">Translated Text (in Dothraki)</label>
+                            <textarea id="translated-output" class="form-field form-textarea"></textarea>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
     </section>
+
 
     <script src="dist/script/index.js"></script>
 </body>

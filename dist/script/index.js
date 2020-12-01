@@ -2,7 +2,6 @@
 var form = document.querySelector(".form");
 var input = document.querySelector("#input");
 var translatedText = document.querySelector("#translated-output");
-var buttonColumn = document.querySelector("#button-column");
 var translateButton = document.querySelector("#translate-button");
 
 //Function to create element and display error message.
@@ -11,13 +10,13 @@ function emptyInput(message) {
   var errorMessage = document.createElement("h3");
 
   //Giving class name to the newly created Dom Element.
-  errorMessage.className = "heading-3 inline-block quote";
+  errorMessage.className = "heading-3 mT-1 quote";
 
   //Passing message argument as a text for Dom Element.
   errorMessage.innerText = message;
 
   //As the dom element is child, need to append it to the parent using appendChild Function
-  buttonColumn.appendChild(errorMessage);
+  form.appendChild(errorMessage);
 }
 
 //Validation Function to check if user's input is empty
