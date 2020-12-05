@@ -36,15 +36,16 @@ function responseHandler() {
   var apiURL = `https://api.funtranslations.com/translate/dothraki.json?text=${input.value}`;
 
   //Fetch API (getting URL and if the status code is 200 then display the data)
-  fetch(apiURL).then(function response(response) {
+  fetch(apiURL).then((response) => {
     response
       .json()
-      .then(function data(responseData) {
+      .then((responseData) => {
+        console.log(responseData.contents.translated);
         translatedText.innerText = responseData.contents.translated;
       })
 
       //In case of error run the .catch function
-      .catch(function catchError(error) {
+      .catch((error) => {
         console.log("Something went wrong", error);
       });
   });
