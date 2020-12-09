@@ -40,13 +40,14 @@ function responseHandler() {
     response
       .json()
       .then((responseData) => {
-        console.log(responseData.contents.translated);
-        translatedText.innerText = responseData.contents.translated;
+        if (!responseData.ok) {
+          alert(responseData.error.message);
+        } else {
+          translatedText.innerText = responseData.contents.translated;
+        }
       })
-
-      //In case of error run the .catch function
-      .catch((error) => {
-        console.log("Something went wrong", error);
+      .catch((err) => {
+        console.log(err);
       });
   });
 }
