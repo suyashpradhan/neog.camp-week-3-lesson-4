@@ -5,7 +5,7 @@ var translatedText = document.querySelector("#translated-output");
 var translateButton = document.querySelector("#translate-button");
 
 //Function to create element and display error message.
-function emptyInput(message) {
+function errorFunction(message) {
   //Creating Dom Element using createElement function
   var errorMessage = document.createElement("h3");
 
@@ -23,7 +23,7 @@ function emptyInput(message) {
 function validation() {
   //Checking condition if input is empty then run emptyInput function with custom error message
   if (input.value == "") {
-    emptyInput("This field is required, Please enter some text!");
+    errorFunction("This field is required, Please enter some text!");
   } else {
     //In case of proper input run responseHandler function
     responseHandler();
@@ -40,14 +40,10 @@ function responseHandler() {
     response
       .json()
       .then((responseData) => {
-        if (!responseData.ok) {
-          alert(responseData.error.message);
-        } else {
-          translatedText.innerText = responseData.contents.translated;
-        }
+        translatedText.innerText = responseData.contents.translated;
       })
       .catch((err) => {
-        console.log(err);
+        errorFunction("Something Went Wrong", err);
       });
   });
 }
